@@ -39,4 +39,5 @@ sysinfo.txt
 
 # Ignore scene subfolders: generated lighting data, test folders
 Assets/_Project/Scenes/Test
+Assets/_Project/Scenes/Test.meta
 Assets/_Project/Scenes/Levels/*/
