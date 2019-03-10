@@ -34,3 +34,9 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+# Project specific:
+
+# Ignore scene subfolders: generated lighting data, test folders
+Assets/_Project/Scenes/Test
+Assets/_Project/Scenes/Levels/*/
