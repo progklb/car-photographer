@@ -5,9 +5,6 @@ using CarPhotographer.Environments;
 
 namespace CarPhotographer.IU
 {
-	/// <summary>
-	/// Controller for the UI used for representing an environment option.
-	/// </summary>
 	public class UIEnvironmentEntry : MonoBehaviour
 	{
 		#region PROPERTIES
@@ -17,9 +14,9 @@ namespace CarPhotographer.IU
 
 		#region VARIABLES
 		[SerializeField]
-		private Text m_Name = null;
+		private Text m_DisplayName;
 		[SerializeField]
-		private Image m_Image = null;
+		private Image m_Thumbnail = null;
 		[SerializeField]
 		private Button m_Button = null;
 		#endregion
@@ -47,8 +44,8 @@ namespace CarPhotographer.IU
 			this.asset = asset;
 
 			// TODO Assign all UI
-			m_Name.text = asset.environmentName;
-			m_Image.sprite = asset.thumbnail;
+			m_DisplayName.text = asset.environmentName;
+			m_Thumbnail.sprite = asset.thumbnail;
 		}
 		#endregion
 	}

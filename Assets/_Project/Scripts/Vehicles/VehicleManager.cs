@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+using System;
+
 using Utilities;
 
 namespace CarPhotographer.Vehicles
@@ -17,17 +19,34 @@ namespace CarPhotographer.Vehicles
 		#endregion
 
 
+		#region EVENTS
+		/// Raised when <see cref="SelectVehicle(VehicleAsset)"/> is called.
+		public static event Action<VehicleAsset> onVehicleSelected = delegate { };
+		#endregion
+
+
+		#region PROPERTIES
+		public VehicleAsset selectedVehicle { get; private set; }
+		#endregion
+
+
 		#region PUBLIC API
-		public VehicleAsset[] GetVehiclesAssets()
+		public static VehicleAsset[] GetVehiclesAssets()
 		{
 			return Resources.LoadAll<VehicleAsset>(VEHICLE_ASSET_PATH);
 		}
 
-		public void UnloadVehicleAssets()
+		public static void UnloadVehicleAssets()
 		{
 			// Unity throws an error when unloading a specified resource.
 			// Let's just release all unused assets instead.
 			Resources.UnloadUnusedAssets();
+		}
+
+		public void SelectVehicle(VehicleAsset asset)
+		{
+			selectedVehicle = asset;
+			onVehicleSelected(asset);
 		}
 		#endregion
 	}

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_VehicleName: Abarth 500
   m_ResourceName: abarth500
-  m_Thumbnail: {fileID: 0}
+  m_Thumbnail: {fileID: 21300000, guid: ca2a18b2d398d6f4d9688de1bd963c11, type: 3}

@@ -45,6 +45,10 @@ namespace CarPhotographer.States.Conditions
 
 		public override void OnEnd()
 		{
+			EnvironmentManager.onEnvironmentSelected -= HandleEnvironmentSelected;
+			EnvironmentManager.onEnvironmentBeginLoading -= HandleEnvironmentBeginLoading;
+			EnvironmentManager.onEnvironmentFinishedLoading -= HandleEnvironmentFinishedLoading;
+			EnvironmentManager.onEnvironmentUnload -= HandleEnvironmentUnload;
 		}
 		#endregion
 

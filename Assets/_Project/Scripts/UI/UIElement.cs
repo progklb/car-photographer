@@ -5,6 +5,9 @@
 	/// </summary>
 	public enum UIElement
 	{
-		LoadingScreen
+		LoadingScreen,
+
+		EnvironmentSelect,
+		VehicleSelect
 	}
 }
