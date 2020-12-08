@@ -2,7 +2,7 @@
 
 using System.Collections.Generic;
 
-using Utilities;
+using Utilities.Frameworks;
 
 namespace CarPhotographer.UI
 {

@@ -3,7 +3,7 @@
 namespace CarPhotographer.Environments
 {
 	/// <summary>
-	/// Provides fine-grained control over specific levels.
+	/// Provides fine-grained control over a specific environment.
 	/// </summary>
 	public sealed class EnvironmentController : MonoBehaviour
 	{
@@ -26,12 +26,12 @@ namespace CarPhotographer.Environments
 		#region UNITY EVENTS
 		void Start()
 		{
-			EnvironmentManager.instance.RegisterController(this);
+			EnvironmentManager.instance.Register(this);
 		}
 
 		void OnDestroy()
 		{
-			EnvironmentManager.instance.DeregisterController(this);
+			EnvironmentManager.instance.Deregister(this);
 		}
 		#endregion
 	}

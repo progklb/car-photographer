@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-using Utilities;
-
 using System;
+
+using Utilities.Frameworks;
 
 using CarPhotographer.Scenes;
 
@@ -11,7 +11,7 @@ namespace CarPhotographer.Environments
 	/// <summary>
 	/// A high-level manager for providing control over environments.
 	/// </summary>
-	public class EnvironmentManager : Singleton<EnvironmentManager>
+	public class EnvironmentManager : Singleton<EnvironmentManager>, IRegistrar<EnvironmentController>
 	{
 		#region CONSTANTS
 		/// File path in Resources where assets are store d.
@@ -41,7 +41,7 @@ namespace CarPhotographer.Environments
 
 
 		#region PUBLIC API - CONTROLLERS
-		public void RegisterController(EnvironmentController controller)
+		public void Register(EnvironmentController controller)
 		{
 			if (currentController != null)
 			{
@@ -52,7 +52,7 @@ namespace CarPhotographer.Environments
 			currentController = controller;
 		}
 
-		public void DeregisterController(EnvironmentController controller)
+		public void Deregister(EnvironmentController controller)
 		{
 			if (currentController != controller)
 			{
@@ -63,7 +63,6 @@ namespace CarPhotographer.Environments
 			currentController = null;
 		}
 		#endregion
-
 
 
 		#region PUBLIC API - ASSETS

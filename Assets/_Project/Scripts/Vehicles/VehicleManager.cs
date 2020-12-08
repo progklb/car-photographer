@@ -2,7 +2,7 @@
 
 using System;
 
-using Utilities;
+using Utilities.Frameworks;
 
 namespace CarPhotographer.Vehicles
 {
