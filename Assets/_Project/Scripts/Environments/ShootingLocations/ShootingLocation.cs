@@ -30,14 +30,14 @@ namespace CarPhotographer.Environments
 		{
 			foreach (var pos in vehiclePositions)
 			{
-				Gizmos.color = Color.cyan;
-				Gizmos.DrawWireSphere(pos.position, 1f);
+				Gizmos.color = Color.green;
+				Gizmos.DrawWireCube(pos.position, Vector3.one * 1f);
 			}
 
 			foreach (var pos in cameraPositions)
 			{
 				Gizmos.color = Color.red;
-				Gizmos.DrawWireCube(pos.position, Vector3.one * 1f);
+				Gizmos.DrawWireSphere(pos.position, 1f);
 			}
 		}
 		#endregion
