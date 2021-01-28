@@ -12,13 +12,13 @@ indent_style = tab
 tab_width = 4
 
 # New line preferences
-end_of_line = lf
-insert_final_newline = true
+end_of_line = crlf
+insert_final_newline = false
 
 #### .NET Coding Conventions ####
 
 # Organize usings
-dotnet_separate_import_directive_groups = true
+dotnet_separate_import_directive_groups = false
 dotnet_sort_system_directives_first = false
 
 # this. and Me. preferences
@@ -182,6 +182,18 @@ dotnet_naming_rule.non_field_members_should_be_pascal_case.severity = error
 dotnet_naming_rule.non_field_members_should_be_pascal_case.symbols = non_field_members
 dotnet_naming_rule.non_field_members_should_be_pascal_case.style = pascal_case
 
+dotnet_naming_rule.public_or_protected_field_should_be_uppercase.severity = error
+dotnet_naming_rule.public_or_protected_field_should_be_uppercase.symbols = public_or_protected_field
+dotnet_naming_rule.public_or_protected_field_should_be_uppercase.style = uppercase
+
+dotnet_naming_rule.constant_should_be_uppercase.severity = error
+dotnet_naming_rule.constant_should_be_uppercase.symbols = constant
+dotnet_naming_rule.constant_should_be_uppercase.style = uppercase
+
+dotnet_naming_rule.read_only_should_be_uppercase.severity = error
+dotnet_naming_rule.read_only_should_be_uppercase.symbols = read_only
+dotnet_naming_rule.read_only_should_be_uppercase.style = uppercase
+
 dotnet_naming_rule.static_field_should_be_begins_with_g_.severity = error
 dotnet_naming_rule.static_field_should_be_begins_with_g_.symbols = static_field
 dotnet_naming_rule.static_field_should_be_begins_with_g_.style = begins_with_g_
@@ -232,6 +244,14 @@ dotnet_naming_symbols.non_field_members.applicable_kinds = property, event, meth
 dotnet_naming_symbols.non_field_members.applicable_accessibilities = public, internal, private, protected, protected_internal
 dotnet_naming_symbols.non_field_members.required_modifiers = 
 
+dotnet_naming_symbols.constant.applicable_kinds = field
+dotnet_naming_symbols.constant.applicable_accessibilities = *
+dotnet_naming_symbols.constant.required_modifiers = const
+
+dotnet_naming_symbols.read_only.applicable_kinds = field
+dotnet_naming_symbols.read_only.applicable_accessibilities = *
+dotnet_naming_symbols.read_only.required_modifiers = readonly, static
+
 # Naming styles
 
 dotnet_naming_style.pascal_case.required_prefix = 
@@ -258,3 +278,8 @@ dotnet_naming_style.camel_case.required_prefix =
 dotnet_naming_style.camel_case.required_suffix = 
 dotnet_naming_style.camel_case.word_separator = 
 dotnet_naming_style.camel_case.capitalization = camel_case
+
+dotnet_naming_style.uppercase.required_prefix = 
+dotnet_naming_style.uppercase.required_suffix = 
+dotnet_naming_style.uppercase.word_separator = 
+dotnet_naming_style.uppercase.capitalization = all_upper
